@@ -9,13 +9,7 @@ docker pull jenkins/jenkins:lts-jdk21
 
 docker volume create jenkins_home
 
-docker run -d `
-  --name jenkins `
-  -p 8089:8080 `
-  -p 50000:50000 `
-  -v jenkins_home:/var/jenkins_home `
-  --restart unless-stopped `
-  jenkins/jenkins:lts-jdk21
+docker run -d --name jenkins -p 8089:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home --restart unless-stopped jenkins/jenkins:lts-jdk21
 ```
 
 ## 2. Get the Initial Admin Password
